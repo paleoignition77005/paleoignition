@@ -1,0 +1,4 @@
+*.npy filter=lfs diff=lfs merge=lfs -text
+data/loveclim_cloudcover.npy filter=lfs diff=lfs merge=lfs -text
+data/loveclim_lightning.npy filter=lfs diff=lfs merge=lfs -text
+data/loveclim_precip_mmday.npy filter=lfs diff=lfs merge=lfs -text
