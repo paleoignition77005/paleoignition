@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref || github.ref_name }}
+          ref: main
 
       - name: Update main.py timestamp line
         run: |
@@ -33,5 +33,5 @@ jobs:
           git config user.name "paleoignition77005"
           git config user.email "paleoignition@gmail.com"
           git add main.py
-          git commit --allow-empty -m "Daily commit - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git commit -m "Daily commit - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           git push
