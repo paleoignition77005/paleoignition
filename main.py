@@ -56,18 +56,7 @@ fig.update_layout(
 # Show the figure in Streamlit
 st.plotly_chart(fig, use_container_width=True)
 
-st.markdown(
-    f"""
-    <div style='position: fixed; bottom: 10px; right: 10px; 
-                background-color: rgba(255, 255, 255, 0.8);
-                padding: 5px 10px; border-radius: 5px; 
-                font-size: 0.9em; color: #333;'>
-        Last updated: {LAST_UPDATE}
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
+st.markdown(f"---\n**Last updated:** {LAST_UPDATE}")
 
 # df = pd.read_csv('charcoal_records.csv')
 
