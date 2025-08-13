@@ -69,3 +69,4 @@ st.plotly_chart(fig, use_container_width=True)
 
 # # Optionally: Show a table with only the valid rows (with no missing values)
 # st.dataframe(df_cleaned)
+# Auto-update: 2025-08-13 10:05:34 UTC
