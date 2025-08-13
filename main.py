@@ -70,3 +70,4 @@ st.plotly_chart(fig, use_container_width=True)
 # # Optionally: Show a table with only the valid rows (with no missing values)
 # st.dataframe(df_cleaned)
 # Auto-update: 2025-08-13 10:08:19 UTC
+LAST_UPDATE = "2025-08-13 10:09:57 UTC"
