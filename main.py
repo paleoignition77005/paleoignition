@@ -4,6 +4,8 @@ import plotly.express as px
 import pandas as pd
 col1, col2 = st.columns(2)
 
+LAST_UPDATE = "2025-08-13 10:09:57 UTC"
+
 with col1: 
     st.write("# Welcome to PaleoIgnition!")
     st.markdown(
@@ -15,6 +17,7 @@ with col1:
         * Find out more about the datasets used on the __Dataset Info + References__ page
         
         """)
+    st.write(f"**Last updated:** {LAST_UPDATE}")
 
 with col2: 
     st.image("paleoignition_logo_white.png", width=500)
@@ -70,4 +73,3 @@ st.plotly_chart(fig, use_container_width=True)
 # # Optionally: Show a table with only the valid rows (with no missing values)
 # st.dataframe(df_cleaned)
 # Auto-update: 2025-08-13 10:08:19 UTC
-LAST_UPDATE = "2025-08-13 10:09:57 UTC"
