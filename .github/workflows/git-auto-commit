@@ -1,0 +1,25 @@
+name: git-auto-commit
+
+on:
+  schedule:
+    - cron: "0 0,12 * * *"
+  workflow_dispatch:
+
+jobs:
+  git-auto-commit:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Create empty commit
+        run: |
+          git config user.name "sd9616"
+          git config user.email "sd96@rice.edu"
+          git commit --allow-empty -m "Daily commit - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git push
