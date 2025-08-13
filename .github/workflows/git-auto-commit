@@ -19,7 +19,7 @@ jobs:
 
       - name: Create empty commit
         run: |
-          git config user.name "sd9616"
-          git config user.email "sd96@rice.edu"
+          git config user.name "paleoignition77005"
+          git config user.email "paleoignition@gmail.com"
           git commit --allow-empty -m "Daily commit - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           git push
