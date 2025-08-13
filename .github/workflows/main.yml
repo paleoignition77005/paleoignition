@@ -17,15 +17,13 @@ jobs:
         with:
           ref: main
 
-      - name: Update main.py timestamp line
+      - name: Update main.py code line
         run: |
-          timestamp="# Auto-update: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-          if grep -q "^# Auto-update:" main.py; then
-            # Replace existing timestamp line
-            sed -i "s|^# Auto-update:.*|$timestamp|" main.py
+          timestamp="$(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          if grep -q "^LAST_UPDATE =" main.py; then
+            sed -i "s|^LAST_UPDATE = .*|LAST_UPDATE = \"$timestamp\"|" main.py
           else
-            # Add timestamp line at the end if not present
-            echo "$timestamp" >> main.py
+            echo "LAST_UPDATE = \"$timestamp\"" >> main.py
           fi
 
       - name: Create empty commit
