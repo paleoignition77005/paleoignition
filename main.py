@@ -4,7 +4,7 @@ import plotly.express as px
 import pandas as pd
 col1, col2 = st.columns(2)
 
-LAST_UPDATE = "2025-08-18 12:48:21 UTC"
+LAST_UPDATE = "2025-08-19 01:44:14 UTC"
 
 with col1: 
     st.write("# Welcome to PaleoIgnition!")
